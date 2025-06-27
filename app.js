@@ -10,4 +10,4 @@ app.use('', (req, res) => {
 	res.send('¡Hola, mundo!');
 });
 
-app.listen(PORT, console.log('>>> Servidor esuchando en http://localhost:', PORT));
+app.listen(PORT, console.log('>>> Servidor esuchando en http://localhost:' + PORT));
