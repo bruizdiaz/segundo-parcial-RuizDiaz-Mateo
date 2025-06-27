@@ -47,6 +47,13 @@ export const createMovie = async (req, res) => {
 			errors.push({ message: '¡No puedes dejar campos vacios!' });
 		if (title === null || director === null || duration === null || genre === null)
 			errors.push({ message: '¡No puedes dejar campos nulos!' });
+		if (
+			title === undefined ||
+			director === undefined ||
+			duration === undefined ||
+			genre === undefined
+		)
+			errors.push({ message: '¡No puedes dejar campos sin definir!' });
 		if (!description || description === null || description === '')
 			newDescription = 'No hay descripcion proporcionada';
 
@@ -70,7 +77,7 @@ export const createMovie = async (req, res) => {
 		const formatedDescription = capitalize(newDescription.trim());
 
 		// Validar unicidad de título
-		const existingMovie = await Movie.findOne({ where: { formatedTitle } });
+		const existingMovie = await Movie.findOne({ where: { title: formatedTitle } });
 		if (existingMovie) {
 			return res.status(409).json({ message: 'Ya existe una película con ese título' });
 		}
@@ -124,7 +131,7 @@ export const updateMovie = async (req, res) => {
 
 		// Validar unicidad de título (excepto la actual)
 		if (title && title !== movie.title) {
-			const existingMovie = await Movie.findOne({ where: { title } });
+			const existingMovie = await Movie.findOne({ where: { title: formatedTitle } });
 			if (existingMovie && existingMovie.id !== movie.id) {
 				return res.status(409).json({ message: 'Ya existe una película con ese título' });
 			}
