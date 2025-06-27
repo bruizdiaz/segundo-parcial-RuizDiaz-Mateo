@@ -31,9 +31,9 @@ Sigue estos pasos para levantar el proyecto en tu entorno local.
 
 ### Pasos
 
-1.  **Clona el repositorio:**
+1.  **Clona el [Repositorio](https://github.com/bruizdiaz/segundo-parcial-RuizDiaz-Mateo.git):**
     ```bash
-    git clone [https://github.com/bruizdiaz/segundo-parcial-RuizDiaz-Mateo.git](https://github.com/bruizdiaz/segundo-parcial-RuizDiaz-Mateo.git)
+    git clone https://github.com/bruizdiaz/segundo-parcial-RuizDiaz-Mateo.git
     cd segundo-parcial-RuizDiaz-Mateo
     ```
 
