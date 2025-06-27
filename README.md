@@ -87,11 +87,11 @@ La API sigue las convenciones RESTful. El prefijo base para todas las rutas es `
 
 | Método | Ruta | Descripción |
 | :--- | :--- | :--- |
-| `GET` | `/movies` | Obtiene una lista de todos los usuarios. |
-| `POST` | `/movies` | Crea un nuevo usuario. |
-| `GET` | `/movies/:id` | Obtiene un usuario específico por su ID. |
-| `PUT` | `/movies/:id` | Actualiza un usuario específico por su ID. |
-| `DELETE`| `/movies/:id` | Elimina un usuario específico por su ID. |
+| `GET` | `/movies` | Obtiene una lista de todas las peliculas. |
+| `POST` | `/movies` | Crea un nueva nueva pelicula. |
+| `GET` | `/movies/:id` | Obtiene una pelicula específico por su ID. |
+| `PUT` | `/movies/:id` | Actualiza una pelicula específica por su ID. |
+| `DELETE`| `/movies/:id` | Elimina una pelicula específica por su ID. |
 
 ---
 
