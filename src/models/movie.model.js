@@ -1,4 +1,4 @@
-import { sequelize } from '../config/database';
+import { sequelize } from '../config/database.js';
 import { DataTypes } from 'sequelize';
 
 export const Movie = sequelize.define('Movie', {
@@ -21,6 +21,6 @@ export const Movie = sequelize.define('Movie', {
 	},
 	description: {
 		type: DataTypes.STRING(200),
-		allowNull: false,
+		allowNull: true,
 	},
 });
